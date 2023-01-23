@@ -1,0 +1,137 @@
+.product-recommendations {
+  display: block;
+}
+
+.product-recommendations slideshow-component ul {
+  scroll-padding-left: 0 !important;
+}
+
+.product-recommendations slideshow-component ul::after {
+  display: none;
+}
+
+.product-recommendations slideshow-component ul .slider__slide {
+  width: 50%;
+}
+
+@media (min-width: 1025px) {
+  .product-recommendations slideshow-component ul .slider__slide .product-card-wrapper {
+    background: var(--color-white);
+    padding: 1rem 1rem 2rem;
+    border-radius: 0.8rem;
+  }
+  .product-recommendations slideshow-component ul .slider__slide .product-card-wrapper:hover a {
+    text-decoration: none;
+  }
+}
+.product-recommendations slideshow-component .card__information {
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+.product-recommendations slideshow-component .card__information .card__heading {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-smoky-black);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.product-recommendations slideshow-component .card__content .card__information {
+  padding-top: 0;
+}
+
+.product-recommendations slideshow-component .card__content .card__information .card__heading {
+  display: none;
+}
+
+.product-recommendations slideshow-component .card__content .card__information .card-information {
+  text-align: center;
+}
+
+.product-recommendations slideshow-component .card__content .card__information .price {
+  margin-top: 0;
+}
+
+.product-recommendations slideshow-component .card__content .card__information .price span {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-smoky-black);
+  letter-spacing: 0;
+}
+
+.product-recommendations slideshow-component .card__content .card__information .price.price--on-sale .price__sale {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.product-recommendations slideshow-component .card__content .card__information .price.price--on-sale .price__sale .price-sale {
+  padding-left: 0.5rem;
+}
+
+.product-recommendations slideshow-component .card__content .card__information .price .price-sale .price-item--regular {
+  margin: 0;
+}
+
+.product-recommendations slideshow-component .slider-buttons .slider-button svg {
+  width: 2.2rem;
+  height: auto;
+  color: var(--color-black);
+}
+
+.product-recommendations slideshow-component .slider-buttons .slider-button.slider-button--prev, .product-recommendations slideshow-component .slider-buttons .slider-button.slider-button--next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 110;
+  padding: 0;
+  width: fit-content;
+}
+
+.product-recommendations slideshow-component .slider-buttons .slider-button.slider-button--next {
+  right: 0;
+  margin-right: 0.5rem;
+}
+
+.product-recommendations slideshow-component .slider-buttons .slider-button.slider-button--prev {
+  left: 0;
+  margin-left: 0.5rem;
+}
+
+.product-recommendations slideshow-component .slider-buttons .slideshow__control-wrapper .slider-counter__link--dots .dot {
+  width: 1rem;
+  height: 1rem;
+}
+
+.product-recommendations__heading {
+  margin: 0 0 3rem;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-black);
+  text-align: center;
+  width: 100%;
+}
+
+.mobile-hidden {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .mobile-hidden:not(.desk-hidden) {
+    display: block;
+  }
+  .desk-hidden {
+    display: none;
+  }
+  .product-recommendations__heading {
+    font-size: var(--font-size-xxxl);
+  }
+}

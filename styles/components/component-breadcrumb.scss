@@ -1,0 +1,99 @@
+.breadcrumbs {
+  margin: 0;
+  padding: 0 1.5rem;
+
+  @media screen and (min-width: 750px) {
+    padding: 0 5rem;
+  }
+
+  @media screen and (min-width: 1025px) {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.breadcrumbs__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 1025px) {
+    display: flex;
+  }
+}
+
+.breadcrumbs__item {
+  &:not(.back-link) {
+    display: none;
+  }
+
+  @media (min-width: 1025px) {
+    &:not(.back-link) {
+      display: inline-block;
+    }
+  }
+
+  &.home {
+    margin-left: .5rem;
+  }
+}
+
+.breadcrumbs__item:not(:last-child):not(:first-child):after {
+  content: '/';
+  display: inline-block;
+  margin: 0 .5rem 0 0;
+  position: relative;
+  vertical-align: middle;
+  color: var(--color-smoky-black);
+}
+
+.breadcrumbs__item.back-link {
+  margin-bottom: .6rem;
+  .breadcrumbs__link {
+    &::before {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNzgiIHdpZHRoPSI1MCIgdHJhbnNmb3JtPSJyb3RhdGUoOTApIj48cGF0aCBkPSJtIDMuOTg2ODY0LDc3LjU5MDA5NiBjIC0xLjkzNDcsLTAuNTg0NDczIC0zLjI5ODY1OTk1LC0yLjA0NTc4OCAtMy44NDI3MDk5NSwtNC4xMTY5OTQgLTAuMzg3NDEsLTEuNDc0ODMgMC4wMjMyLC0zLjI2MTU2MiAxLjAyNTUyOTk1LC00LjQ2MjQwNCAwLjQwNDM1LC0wLjQ4NDQzNiA4LjM3MzU5LC03LjQwNzY4OSAxNy43MDk0MiwtMTUuMzg1MDA0IEMgMjguMjE0OTM4LDQ1LjY0ODM3OSAzNS44NjA0ODUsMzkuMDQzMDEgMzUuODY5MjExLDM4Ljk0NzA5IDM1Ljg3NzkxMSwzOC44NTExOSAyOC41NzE0NTksMzIuNTEyNTYgMTkuNjMyNTkzLDI0Ljg2MTI5IDEwLjY5MzcyNCwxNy4yMTAwMSAyLjgyMTU0NCwxMC40MTE5NCAyLjEzODg0NCw5Ljc1NDQ1OTcgYyAtMS40Mzg3NTk5NSwtMS4zODU2MiAtMi4xNDAxMTk5NSwtMy4yMzA2MiAtMS44NTIxNzk5NSwtNC44NzIzMyAwLjU5OTcsLTMuNDE5MjEgNC4xNTUyNDk5NSwtNS41NDMwOSA3LjI4MTA4OTk1LC00LjM0OTMyIDAuOTA2OTEsMC4zNDYzNSA2LjE3MjY5OCw0LjcxNjMxIDIxLjA2NTM3MiwxNy40ODE2ODAzIDEwLjkyMDkxMyw5LjM2MDk0IDIwLjEwMTkzLDE3LjM2NDk4IDIwLjQwMjI2LDE3Ljc4Njc2IDAuOTUxNzUxLDEuMzM2NjEgMS4yMDg2ODcsMi45MzMzMyAwLjcyODU3Nyw0LjUyNzcgLTAuMjI4OTgyLDAuNzYwNDIgLTAuNjc3MzAyLDEuNjg2OTYgLTAuOTk2MjcsMi4wNTkgLTEuMjYzNDYyLDEuNDczNjY1IC00MC4xNzkyMjksMzQuNDg5NjE5IC00MS4xOTc5MzksMzQuOTUyMTQ1IC0xLjEyOTkzLDAuNTEzMDE0IC0yLjQxNTM3LDAuNjAyNzA3IC0zLjU4Mjg5LDAuMjUwMDAxIHoiIGZpbGw9IiMwYjBlMGIiLz48L3N2Zz4=");
+      content: "";
+      display: inline-block !important;
+      width: 1rem;
+      height: 1rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      transform: rotate(90deg);
+      margin-right: 1rem;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    &::after {
+      content: '|';
+      display: inline-block;
+      color: var(--color-smoky-black);
+    }
+  }
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-smoky-black);
+  letter-spacing: 0;
+}
+
+.breadcrumbs__link:visited {
+  text-decoration: none;
+  color: var(--color-smoky-black);
+}
+
+.breadcrumbs__link[aria-current="page"] {
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.breadcrumbs__link[aria-current="page"]:hover,
+.breadcrumbs__link[aria-current="page"]:focus {
+  text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+{{ 'component-breadcrumb.css' | asset_url | stylesheet_tag }}
+
+{%- assign t = template | split: '.' | first -%}
+
+<nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+  <ol class="breadcrumbs__list">
+    {%- case t -%}
+      {%- when 'product' -%}
+        <li class="breadcrumbs__item back-link">
+          <a class="breadcrumbs__link" href="/">Back</a>
+        </li>
+        <li class="breadcrumbs__item home">
+          <a class="breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="/collections">Collections</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="/collections">Collections</a>
+        </li>
+    {% endcase %}
+  </ol>
+</nav>
